@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :links, :only => [:show, :new, :create]
+  root 'links#index'
+  resources :links
+  
+  get '/links/new' => 'links#new'
+  post '/links/create/' => 'links#create'
+   #get 'links/' => 'links#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

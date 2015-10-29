@@ -1,13 +1,19 @@
-<h1>Links#new</h1>
-<p>Find me in app/views/links/new.html.erb</p>
-
-
-<div class="main">
+<div class="header">
   <div class="container">
-    <h1>Hello my name is Anastasia</h1>
-    <p>Add your link</p>
+ 
+    <h1>Add a new link</h1>
   </div>
 </div>
 
-
-
+ <div class="create">
+  <div class="container">
+    
+    <%= form_for @link do |f| %>
+ 
+      <%= f.text_area :link, size: "60x1" %>
+      <br>
+      <%= f.submit "Add" %>
+    <% end %>
+    
+  </div>
+</div>
