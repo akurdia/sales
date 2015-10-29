@@ -1,0 +1,17 @@
+<h1>Links directory</h1>
+<%= link_to 'New Link', "links/new/" %>
+
+
+<% @links.each do |link| %> 
+<div class="message"> 
+  <p> <a href="<%=  link.link %>"><%=  link.link %></a>
+   <%= link.created_at %></p> 
+</div> 
+<% end %>
+
+
+
+
+
+
+
