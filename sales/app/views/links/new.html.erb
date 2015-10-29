@@ -9,7 +9,7 @@
   <div class="container">
     
     <%= form_for @link do |f| %>
- 
+      <%= f.label :link %>:
       <%= f.text_area :link, size: "60x1" %>
       <br>
       <%= f.submit "Add" %>
