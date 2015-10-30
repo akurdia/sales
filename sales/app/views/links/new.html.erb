@@ -11,6 +11,9 @@
     <%= form_for @link do |f| %>
       <%= f.label :link %>:
       <%= f.text_area :link, size: "60x1" %>
+   <br>
+      <%= f.label :usermyid %>:
+      <%= f.text_area :usermyid, size: "6x1" %>
       <br>
       <%= f.submit "Add" %>
     <% end %>

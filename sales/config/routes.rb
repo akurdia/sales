@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   
   get '/links/new' => 'links#new'
   post '/links/create/' => 'links#create'
+  
+  get '/users/new' => 'users#new'
+  post '/users/create/' => 'users#create'
+  
    #get 'links/' => 'links#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

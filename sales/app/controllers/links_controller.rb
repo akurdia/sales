@@ -10,6 +10,7 @@ class LinksController < ApplicationController
 
   def create 
   @message = Link.new(message_params) 
+   
   if @message.save 
     redirect_to '/links' 
   ##else 
@@ -23,7 +24,7 @@ class LinksController < ApplicationController
   
 private 
   def message_params 
-    params.require(:link).permit(:link) 
+    params.require(:link).permit(:link, :usermyid)  
   end
  
 end
