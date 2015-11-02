@@ -1,0 +1,22 @@
+<div class="header">
+  <div class="container">
+ 
+    <h1>Add a new user</h1>
+  </div>
+</div>
+
+ <div class="create">
+  <div class="container">
+
+  <%= form_tag users_path, :method => :post do%>
+  
+  <%= label :user, :username, "Username" %>
+  <%= text_field :user, :username%>
+  
+  <%= label :user, :myid, "User ID" %>
+  <%= text_field :user, :myid%>
+
+  <%= submit_tag "Add " %>
+  <%end%>
+  </div>
+</div>

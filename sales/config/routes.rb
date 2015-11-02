@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   root 'links#index'
   resources :links
+  resources :users
   
   get '/links/new' => 'links#new'
-  post '/links/create/' => 'links#create'
+  post '/links/create' => 'links#create'
   
   get '/users/new' => 'users#new'
-  post '/users/create/' => 'users#create'
+  post '/users/create' => 'users#create'
+  
+  
   
    #get 'links/' => 'links#index'
 

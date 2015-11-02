@@ -6,11 +6,16 @@ class UsersController < ApplicationController
   def create 
   @message = User.new(message_params) 
   if @message.save 
-    redirect_to '/user' 
+    redirect_to :root
   ##else 
    ## render 'new' 
-  end 
   end
-
+  end
+  
+ 
+private 
+  def message_params 
+    params.require(:user).permit(:username, :myid)  
+  end 
     
 end

@@ -1,5 +1,5 @@
 <h1>Links directory</h1>
-<%= link_to 'New Link', "links/new/" %>
+<%= link_to 'New Link', new_link_path %>
 
 
 <% @links.each do |link| %> 
@@ -11,6 +11,7 @@
 </div> 
 <% end %>
 
+<%= link_to 'New User', new_user_path  %>
  
 
 
