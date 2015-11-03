@@ -9,8 +9,16 @@ class UsersController < ApplicationController
     redirect_to :root
   ##else 
    ## render 'new' 
+    end
   end
-  end
+  
+  
+  
+  def show 
+  	@user= User.find_by_myid(params[:id])
+    @links = Link.where("usermyid"=> @user.myid)
+ 
+	end
   
  
 private 

@@ -1,17 +1,19 @@
-<h1>Links directory</h1>
-<%= link_to 'New Link', new_link_path %>
+<h1>Directory of links with user info</h1>
+<%= link_to 'New Link', new_link_path %>   <%= link_to 'New User', new_user_path  %>
 
+<br>
+<br>
 
 <% @links.each do |link| %> 
 <div class="message"> 
   <p> <a href="<%=  link.link %>"><%=  link.link %></a>
-   <%= link.created_at %> by <%= link.usermyid %></p> 
+   Created on <%= link.created_at %> by   <a href="<%= users_path%>/<%= link.usermyid%>"> <%= link.usermyid %>  </a> 
    
   
 </div> 
 <% end %>
 
-<%= link_to 'New User', new_user_path  %>
+
  
 
 

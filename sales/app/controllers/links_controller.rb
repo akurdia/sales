@@ -18,9 +18,6 @@ class LinksController < ApplicationController
   end 
   end
 
-
-
-
   
 private 
   def message_params 

@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post '/users/create' => 'users#create'
   
   
+  get '/users/:id' => 'users#show' 
+  
   
    #get 'links/' => 'links#index'
 
